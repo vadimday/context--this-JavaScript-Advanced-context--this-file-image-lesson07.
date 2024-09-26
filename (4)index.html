@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Приховати або показати текст</title>
+  </head>
+  <body>
+    <button id="toggleText">Приховати/Показати текст</button>
+    <p id="text">Це текст, який можна приховати або показати.</p>
+
+    <script>
+      document.getElementById("toggleText").onclick = function () {
+        let text = document.getElementById("text");
+        if (text.style.display === "none") {
+          text.style.display = "block";
+        } else {
+          text.style.display = "none";
+        }
+      };
+    </script>
+  </body>
+</html>

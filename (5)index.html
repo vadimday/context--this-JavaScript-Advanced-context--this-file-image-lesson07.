@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Лічильник натискань</title>
+  </head>
+  <body>
+    <button id="countButton">Натискай мене</button>
+    <p id="clicks">0</p>
+
+    <script>
+      let count = 0;
+
+      document.getElementById("countButton").onclick = function () {
+        count++;
+        document.getElementById("clicks").innerText = count;
+      };
+    </script>
+  </body>
+</html>

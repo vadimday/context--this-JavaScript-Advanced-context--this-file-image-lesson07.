@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таймер</title>
+  </head>
+  <body>
+    <button id="start">Запуск</button>
+    <button id="stop">Зупинити</button>
+    <button id="reset">Скинути</button>
+    <p id="counter">0</p>
+
+    <script>
+      let count = 0;
+      let interval;
+
+      document.getElementById("start").onclick = function () {
+        interval = setInterval(function () {
+          count++;
+          document.getElementById("counter").innerText = count;
+        }, 1000);
+      };
+
+      document.getElementById("stop").onclick = function () {
+        clearInterval(interval);
+      };
+
+      document.getElementById("reset").onclick = function () {
+        clearInterval(interval);
+        count = 0;
+        document.getElementById("counter").innerText = count;
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Таймер</title>
+  </head>
+  <body>
+    <button id="start">Запуск</button>
+    <button id="stop">Зупинити</button>
+    <p id="message"></p>
+
+    <script>
+      let timer;
+
+      document.getElementById("start").onclick = function () {
+        timer = setTimeout(function () {
+          document.getElementById("message").innerText = "Час минув!";
+        }, 5000);
+      };
+
+      document.getElementById("stop").onclick = function () {
+        clearTimeout(timer);
+        document.getElementById("message").innerText = "";
+      };
+    </script>
+  </body>
+</html>

@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Зміна фону</title>
+  </head>
+  <body>
+    <button id="changeColor">Змінити фон</button>
+
+    <script>
+      function getRandomColor() {
+        return "#" + Math.floor(Math.random() * 16777215).toString(16);
+      }
+
+      document.getElementById("changeColor").onclick = function () {
+        document.body.style.backgroundColor = getRandomColor();
+      };
+    </script>
+  </body>
+</html>
